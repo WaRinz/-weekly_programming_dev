@@ -27,7 +27,7 @@ int main()
 	int num;
 /*MENU*/
 	printf("MENU\n");
-	printf("1-> CIRCLE \n2-> RECTANGLE \n3-> TRIANGLE \n\n press the number then ENTER ---> ");
+	printf("1-> CIRCLE \n2-> RECTANGLE \n3-> TRIANGLE \n\npress the number then ENTER ---> ");
 	scanf_s("%d", &num);
 /*IF INPUT NUMBER IS 1,2,3 CAN GO TO SOLUTION*/
 	if (num == 1&&2&&3) {
@@ -65,8 +65,8 @@ int main()
 /*IF INPUT NUMBER IS NOT 1,2,3 --> ERROR CAN'T PROCESS*/
 	else
 	{
-		printf("** ERROR! TYPE 1,2,3 ONLY!!! **\n\n");
+		printf("\n\n** ERROR! TYPE 1,2,3 ONLY!!! **\n\n");
 	}
 /*END LINE*/
-	printf("===================");
+	printf("=======================================");
 }
