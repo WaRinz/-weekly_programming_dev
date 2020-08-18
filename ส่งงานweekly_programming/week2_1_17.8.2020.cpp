@@ -30,7 +30,7 @@ int main()
 	printf("1-> CIRCLE \n2-> RECTANGLE \n3-> TRIANGLE \n\npress the number then ENTER ---> ");
 	scanf_s("%d", &num);
 /*IF INPUT NUMBER IS 1,2,3 CAN GO TO SOLUTION*/
-	if (num == 1&&2&&3) {
+	if (num == 1||2||3) {
 /*PRESS 1 -> GO TO CIRCLE*/
 		if (num == 1)
 		{
