@@ -9,7 +9,7 @@ int scanage()
 	scanf_s("%d", &age);
 	if (age <= 0)
 	{
-		printf("Age can not less than 0 !!\n\n");
+		printf("Age can not less than 0 OR Character!!\n\n");
 	}
 	else if (age <= 11)
 	{
@@ -32,13 +32,16 @@ int scanage()
 float para()
 {
 	float par;
-	printf("Please Enter Your Weight : ");
+	printf("Please Enter Your Weight in kg (number only) : ");
 	scanf_s("%f", &par);
-	printf("Your weight is : %.2f", par);
+	if (par > 0) 
+	{
+		printf("Your weight is : %.2f", par);
+	}
 	printf("\nPrepare paracetamol 500mg ->");
 	if (par <= 0)
 	{
-		printf("Weight can not be 0 or less than 0 !!\n\n");
+		printf("can not prepare because Weight can not be 0 or less than 0 or Character!!\n\n");
 	}
 	else if (par <= 33)
 	{
@@ -61,42 +64,45 @@ float para()
 float bmi()
 {
 	float BMI, w, h;
-	printf("Enter weight (example 68.16 kg) : ");
+	printf("Enter weight in kg (example 68.16) : ");
 	scanf_s("%f", &w);
 	if (w <= 0)
 	{
-		printf("weight cannot be zero or less than zero!\n");
+		printf("weight cannot be zero or less than zero or CHARACTER!\n");
+		return w;
 	}
-	printf("Enter height (example 1.75 m) : ");
-	scanf_s("%f", &h);
-	if (h <= 0)
+	if (w > 0)
 	{
-		printf("height cannot be zero or less than zero!\n");
+		printf("Enter height in m (example 1.75) : ");
+		scanf_s("%f", &h);
+		if (h <= 0)
+		{
+			printf("height cannot be zero or less than zero or CHARACTER!\n");
+			return h;
+		}
+		BMI = w / (h * h);
+		if (w && h > 0)
+		{
+			if (BMI <= 18.5)
+			{
+				printf("Your BMI is : % .2f -> TOO THIN! eat more and exercise!\n\n", BMI);
+			}
+			else if (BMI <= 24)
+			{
+				printf("Your BMI is : % .2f -> NORMAL! Healthy and Happy!\n\n", BMI);
+			}
+			else if (BMI <= 29.9)
+			{
+				printf("Your BMI is : % .2f -> FAT! go to exercise now!\n\n", BMI);
+			}
+			else
+			{
+				printf("Your BMI is : % .2f -> TOO FAT! go to hospital to see doctor!\n\n", BMI);
+			}
+		}
+		
 	}
-	BMI = w / (h * h);
-	if (w && h > 0)
-	{
-		if (BMI <= 18.5)
-		{
-			printf("Your BMI is : % .2f -> TOO THIN! eat more and exercise!\n\n",BMI);
-		}
-		else if (BMI <= 24)
-		{
-			printf("Your BMI is : % .2f -> NORMAL! Healthy and Happy!\n\n",BMI);
-		}
-		else if (BMI <= 29.9)
-		{
-			printf("Your BMI is : % .2f -> FAT! go to exercise now!\n\n",BMI);
-		}
-		else
-		{
-			printf("Your BMI is : % .2f -> TOO FAT! go to hospital to see doctor!\n\n",BMI);
-		}
-	}
-	else
-	{
-		printf("weight and height should more than zero!\n\n");
-	}
+	
 	return BMI;
 
 }
@@ -132,4 +138,5 @@ int main()
 	printf("THANK YOU!\n");
 	/*end line*/
 	printf("==================================");
+	return 0;
 }
