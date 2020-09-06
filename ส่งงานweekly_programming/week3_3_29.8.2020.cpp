@@ -24,7 +24,14 @@ int main()
 	printf("ENTER SALARY : ");
 	scanf_s("%d", &salary);
 	/*CURRENT SALARY*/
-	printf("HAS LATE? (Yes = 1 / No = 2) : ");
+	if (salary < 0)
+	{
+		printf("salary should more than 0 or can not be letter\n\n");
+
+	}
+	else if (salary > 0)
+	{
+printf("HAS LATE? (Yes = 1 / No = 2) : ");
 	scanf_s("%d", &num);
 	if (num == 1 || 2) 
 	{
@@ -87,7 +94,9 @@ int main()
 			printf("!! PLEASE ENTER 1,2 ONLY !!\n\n");
 		}
 	}
-
+	}
+	
+		printf("THANK YOU!!\n");
 		/*END LINE*/
 		printf("=======================================");
 	return 0;
