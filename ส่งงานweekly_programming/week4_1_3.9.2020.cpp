@@ -14,7 +14,7 @@ int main()
 	/*MENU*/
 	printf("-3- TUTOR BKK YEP -3-\n");
 	printf("(( 300.- / hour ))\n\n");
-	printf("Press 1->Contact 2->Purchase\n");
+	printf("Press\n 1-> Contact\n 2->Purchase\n");
 	printf("Enter Number : ");
 	scanf_s("%d", &num);
 	if (num == 1 || 2)
@@ -32,7 +32,7 @@ int main()
 			scanf_s("%d", &hr);
 			/*Bill*/
 			if (hr > 0) {
-				printf("Total : %d\n", total(hr));
+				printf("Total : %d\n\n", total(hr));
 				printf("Receive Money : ");
 				scanf_s("%d", &c);
 				if (c >= total(hr)) {
@@ -40,11 +40,11 @@ int main()
 					printf("THANK YOU!\n\n");
 				}
 				else {
-					printf("YOU DON'T HAVE ENOUGH MONEY!!\n\n");
+					printf("YOU DON'T HAVE ENOUGH MONEY (RECEIVE < TOTAL) or\nPLEASE ENTER THE <NUMBER> AND MORE THAN 0(RECEIVE = 0 / letter) \n\n");
 				}
 			}
 			else if (hr <= 0) {
-				printf("HOUR MUST BE MORE THAN ZERO!!\n\n");
+				printf("HOUR MUST BE MORE THAN ZERO or CAN NOT BE CHARACTER\n\n");
 			}
 		}
 		else
