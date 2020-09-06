@@ -23,7 +23,7 @@ int main()
 	int num;
 	printf("== HAPPY DRINK ONLINE CAFE ==\n\n");
 	printf("Select Menu : \n");
-	printf("1-> Menu \n2.Contact  \n\n==>");
+	printf("1-> Menu \n2-> Contact  \n\n==>");
 	scanf_s("%d", &num);
 	if (num == 1 || 2)
 	{
