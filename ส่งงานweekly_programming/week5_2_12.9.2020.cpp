@@ -1,13 +1,14 @@
 /*63010849 Worawich Tangpojthaweeporn sec 119*/
 #include <stdio.h>
-char num(char);
+char num();
 
-char num(char a[])
+char num()
 {
+    char a[50];
     char* p;/*pointer*/
-    p = &a[0];/*index*/
-
-    if (a[50])
+    p = a;/*index*/
+    scanf("%s", a, 50);
+    if (a)
     {
         printf("\nAnswer is ----> ");
         while (*p != '\0')
@@ -22,15 +23,12 @@ char num(char a[])
 
     return *p;
 }
-
 int main()
 {
-    char a[50];
 
-    printf("!! CAUTIONS !!\n\n(the answer will blank if don't have a - z or more than 30 characters)\n");
-    printf("Type string here (less than 30 characters and no space bar!) : ");
-    scanf_s("%s", &a, 50);
-    num(a);
+    printf("!! CAUTIONS !!\n\n(the answer will blank if don't have a - z or more than 50 characters)\n");
+    printf("Type string here (less than 50 characters and no space bar!) : ");
+    num();
 
     printf("\n\n===============================");
     return 0;
