@@ -1,12 +1,13 @@
 #include <stdio.h>
-char num(char);
+char num();
 
-char num(char a[])
+char num()
 {
+    char a[30];
     char* p;
-    p = &a[0];
-   
-    if (a[30])
+    p = a;
+    scanf_s("%s", &a, 30);
+    if (a)
     {
         printf("\nAnswer is ----> ");
         while (*p != '\0')
@@ -24,12 +25,10 @@ char num(char a[])
 
 int main()
 {
-    char a[30];
-   
-    printf("Type string here (less than 30 characters and no space bar!) : \n\n");
+    
     printf("!! CAUTIONS !!\n\n(the answer will blank if don't have a - z or more than 30 characters)\n");
-    scanf_s("%s", &a,30);
-    num(a);
+    printf("Type string here (less than 30 characters and no space bar!) : ");
+    num();
     
     printf("\n\n===============================");
     return 0;
