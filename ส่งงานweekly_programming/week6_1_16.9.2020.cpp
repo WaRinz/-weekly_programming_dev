@@ -28,7 +28,7 @@ int age()
 		}
 		else
 		{
-			printf("Age must start at 1 and can not be characters!\n(normal people can't live more than 130 years!)");
+			printf("!!CAUTIONS!!\n\nAge must start at 1 and can not be characters!\n(normal people can't live more than 130 years!)");
 		}
 	}
 	
