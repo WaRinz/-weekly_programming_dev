@@ -27,7 +27,7 @@ int main()
 {
 	int num;
 	printf(" !!CAUTIONS!!\n\nIf input isn't an integer -> It will transform to integer\n\nExample : 4.3 -> input is 4!\n\nNOTE : 0 is original even number!\n\n");
-	printf(" PLEASE ENTER THE NUMBER (start at 0 and not more than 100): ");
+	printf(" PLEASE ENTER THE NUMBER (start at 1 and not more than 100): ");
 	scanf_s("%d", &num);
 	evenodd(num);
 	printf("\n\n===========================================");
