@@ -8,10 +8,6 @@ int age()
 	/* address */
 	p = &a;
 	scanf_s("%d", &a);
-	if (*p < 1)
-	{
-		printf("\nAge must start at 1 and can not be characters!");
-	}
 	if ((*p >= 1) && (*p != 0))
 	{
 		if (a <= 11)
@@ -32,7 +28,7 @@ int age()
 		}
 		else
 		{
-			printf("Are you a human ?? How can you live so many years!");
+			printf("Age must start at 1 and can not be characters!\n(normal people can't live more than 130 years!)");
 		}
 	}
 	
