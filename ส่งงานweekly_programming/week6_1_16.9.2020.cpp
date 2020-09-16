@@ -8,7 +8,7 @@ int age()
 	/* address */
 	p = &a;
 	scanf_s("%d", &a);
-	if ((*p >= 1) && (*p != 0))
+	if ((*p >= 1))
 	{
 		if (a <= 11)
 		{
