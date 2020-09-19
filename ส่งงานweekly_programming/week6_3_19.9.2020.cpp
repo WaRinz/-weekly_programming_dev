@@ -34,41 +34,50 @@ void gv()
 }
 int main()
 {
-	int num[3] = { 1,2,3 };/* array = 1,2,3*/
+	int num[1];/* array = one number only*/
 	int* p;
-	int  num1;
-	p = num;/* pointer same with array num*/
+	p = &num[0];/* pointer same with array num*/
 	printf("!! Cautions !!\n\n");
 	printf("If you put the number like 1.999 or 2.2, It will transform to 1, 2 (Integer)!\n\n");
 	printf("Please select fruit : \n");
 	printf("\n1-> Mangoes \n2-> Apples \n3-> Guavas \n\nType Number ---> ");
-	scanf_s("%d", &num1);
-	
-	if (num1 == 1 || 2 || 3)
+	scanf_s("%d", p);
+
+	if (*p < 0 || *p == 0 || *p > 0)
+{
+	if (*p == 0)/* type else */
 	{
-		if (num1 == 1)/* mangoes */
+		printf("Please Enter 1,2,3 ONLY!!\n\nThank You!\n");
+	}
+	if (*p < 0)/* type else */
+	{
+		printf("Please Enter 1,2,3 ONLY!!\n\nThank You!\n");
+	}
+	if (*p >= 1 && *p <= 3)/* type else */
+	{
+		if (*p == 1)/* mangoes */
 		{
-			printf("%d", num1);
-			*p == 1;
+			printf("%d", *p);
 			mg();
 		}
-		else if (num1 == 2)/* apples */
+		else if (*p == 2)/* apples */
 		{
-			printf("%d", num1);
-			*p == 2;
+			printf("%d", *p);
 			ap();
 		}
-		else if (num1 == 3)/* guavas */
+		else if (*p == 3)/* guavas */
 		{
-			printf("%d", num1);
-			*p == 3;
+			printf("%d", *p);
 			gv();
 		}
-		else/* type else */
+		
+	}
+	if (*p > 3)
 		{
 			printf("Please Enter 1,2,3 ONLY!!\n\nThank You!\n");
 		}
-	}
+	
+}
 	/*end line*/
 	printf("\n\n==================================");
 	return 0;
