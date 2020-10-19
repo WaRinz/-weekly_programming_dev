@@ -27,7 +27,7 @@ int main()
     printf("In this program, It will calculate which answer is + only\n\n");
     printf("Distance (in meter) : ");
     scanf_s("%f", &a);
-    printf("\n\nTime (in meter) : ");
+    printf("\n\nTime (in second) : ");
     scanf_s("%f", &b);
 
     if (a || b < 0 || a || b == 0 || a || b > 0)
